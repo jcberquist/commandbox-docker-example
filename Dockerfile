@@ -15,4 +15,4 @@ RUN box task run
 
 COPY ./index.cfm /app/
 
-CMD $(box server start --console --command openbrowser=false savesettings=false host=0.0.0.0 port=80 | tail -n 1 | xargs)
+CMD $(box server start --console --command openbrowser=false savesettings=false host=0.0.0.0 port=80 | tail -n 1)
