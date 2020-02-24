@@ -1,18 +1,25 @@
-FROM amazoncorretto:8
+# syntax=docker/dockerfile:1.0.0-experimental
+FROM adoptopenjdk/openjdk11:slim as lucee
 
-RUN yum install -y which && yum clean -y all
-
-COPY box-4.8.0 /usr/bin/box
+COPY ./artifacts/box-5.0.0 /usr/bin/box
 RUN chmod 755 /usr/bin/box && \
     echo "$(box version) successfully installed"
-
-COPY ./ServerService.cfc /root/.CommandBox/cfml/system/services/
-COPY ./task.cfc /app/
+COPY ./artifacts/lucee-light /root/.CommandBox/artifacts/lucee-light
+COPY ./artifacts/esapi-extension-2.1.0.17.lex /root/lucee-extensions/
 
 WORKDIR /app/
 
-RUN box task run
+COPY ./config/ /app/
+RUN box task run task.cfc commandboxModules
+RUN box task run task.cfc dockerWarmup
 
-COPY ./index.cfm /app/
 
-CMD $(box server start --console --command openbrowser=false savesettings=false host=0.0.0.0 port=80 | tail -n 1)
+FROM adoptopenjdk/openjdk11:slim as app
+
+COPY --from=lucee /serverHome/ /serverHome/
+COPY --from=lucee /root/.CommandBox/lib/runwar-4.0.2.jar /serverHome/
+COPY --from=lucee /app/server-start.sh /usr/bin/
+
+COPY ./app/ /app/
+
+CMD server-start.sh

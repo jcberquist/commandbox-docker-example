@@ -1,0 +1,203 @@
+{
+    "CGIReadOnly": "true",
+    "applicationListener": "mixed",
+    "applicationMode": "curr2root",
+    "applicationTimeout": "1,0,0,0",
+    "clientCookies": "true",
+    "clientManagement": "false",
+    "clientStorage": "cookie",
+    "clientTimeout": "90,0,0,0",
+    "dotNotationUpperCase": "false",
+    "localScopeMode": "classic",
+    "loggers":{
+        "application":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "datasource":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "deploy":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout",
+            "level":"info"
+        },
+        "exception":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"error"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "gateway":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "mail":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "mapping":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "memory":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "orm":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "remoteclient":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout",
+            "level":"info"
+        },
+        "requesttimeout":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "rest":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "scheduler":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "scope":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "search":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "thread":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        },
+        "trace":{
+            "appender":"resource",
+            "appenderArguments":{
+                "streamtype":"output"
+            },
+            "appenderClass":"lucee.commons.io.log.log4j.appender.ConsoleAppender",
+            "layout":"classic",
+            "layoutArguments":{},
+            "layoutClass":"lucee.commons.io.log.log4j.layout.ClassicLayout"
+        }
+    },
+    "mergeURLAndForm": "false",
+    "nullSupport": "true",
+    "requestTimeout": "0,0,0,50",
+    "scopeCascading": "strict",
+    "searchResultsets": "true",
+    "sessionMangement": "true",
+    "sessionStorage": "memory",
+    "sessionTimeout": "0,0,30,0",
+    "sessionType": "application",
+    "suppressWhitespaceBeforecfargument": "true",
+    "systemErr":"default",
+    "systemOut":"default",
+    "templateCharset": "UTF-8",
+    "thisLocale": "en_US",
+    "thisTimeZone": "UTC",
+    "timeServer": "pool.ntp.org",
+    "useTimeServer": "true"
+}

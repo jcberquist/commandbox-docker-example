@@ -1,0 +1,28 @@
+{
+    "app": {
+        "cfengine": "lucee-light@5.3.5+80",
+        "serverHomeDirectory": "/serverHome/"
+    },
+    "cfconfigfile": ".cfconfig.json",
+    "jvm": {
+        "args": "-XX:MaxMetaspaceSize=128m -Dlucee.extensions.install=false",
+        "heapSize": 256,
+        "minHeapSize": 256
+    },
+    "luceeServerExtensions": [
+        {
+            "id": "37C61C0A-5D7E-4256-8572639BE0CF5838",
+            "location": "/root/lucee-extensions/esapi-extension-2.1.0.17.lex",
+            "name": "ESAPI extension",
+            "version": "2.1.0.17"
+        }
+    ],
+    "name": "docker-app",
+    "trayEnable": false,
+    "web": {
+        "host": "0.0.0.0",
+        "http": {
+            "port": 8080
+        }        
+    }
+}
