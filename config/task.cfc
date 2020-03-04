@@ -24,7 +24,7 @@ component {
         }
 
         return modules_installed;
-    }    
+    }
 
     function dockerWarmup() {
         command( 'mkdir /serverHome/' ).run();
@@ -55,6 +55,8 @@ component {
         print.line( 'Cleaning up start script...' ).toConsole();
         var startScriptFile = resolvePath( './server-start.sh' );
         var startScript = fileRead( startScriptFile );
+        // use exec so Java gets to be PID 1
+        startScript = startScript.reReplace( '(\n)([^\n]+/java)', '\1exec \2' );
         // remove uneeded tray config items
         startScript = startScript.reReplace( '\n[\t ]+''--tray-(icon|config)[^\n]+', '', 'all' );
         // update runwar location

@@ -22,4 +22,4 @@ COPY --from=lucee /app/server-start.sh /usr/bin/
 
 COPY ./app/ /app/
 
-CMD server-start.sh
+CMD ["server-start.sh"]
